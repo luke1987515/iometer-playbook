@@ -295,9 +295,10 @@ unzip iometer-1.1.0-win64.x86_64-bin.zip
 # Backup any existing iometer-playbook directory
 
 if [ -d ~/Desktop/IOmeter-linux ]; then
-    echo "Backing up older iometer-playbook directory..."
+    echo "Backing up older IOmeter-linux directory..."
+    mv -- ~/Desktop/IOmeter-linux "IOmeter-linux.backup.$(date +%s)"
     rm -rf ~/Desktop/IOmeter-linux
-    mv -- IOmeter-linux "IOmeter-linux.backup.$(date +%s)"
+
 fi
 mkdir ~/Desktop/IOmeter-linux
 
