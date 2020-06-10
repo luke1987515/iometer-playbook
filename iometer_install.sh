@@ -149,9 +149,6 @@ function init_centos_8(){
     echo "Enabled yum PowerTools..."
     dnf config-manager --set-enabled PowerTools
     
-	echo "Enabled rhel-8-for-x86_64-appstream-rpms repo"
-    subscription-manager repos --enable=rhel-8-for-x86_64-appstream-rpms
-
     local OUTPUT=$(needs-restarting)
     if [[ "$OUTPUT" != "" ]]; then
         [[ "$SKIP_REBOOT" != true ]] && { inform_reboot; exit 0; }
