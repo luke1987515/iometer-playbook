@@ -294,8 +294,8 @@ unzip iometer-1.1.0-win64.x86_64-bin.zip
 
 mkdir ~/Desktop/IOmeter-linux
 
-cp iometer-1.1.0-linux.x86_64-bin/dynamo ~/Desktop/IOmeter-linux
-cp iometer-1.1.0-win64.x86_64-bin/IOmeter.exe ~/Desktop/IOmeter-linux
+cp dynamo ~/Desktop/IOmeter-linux
+cp IOmeter.exe ~/Desktop/IOmeter-linux
 
 cd ~/Desktop/IOmeter-linux
 
