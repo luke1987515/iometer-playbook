@@ -292,10 +292,17 @@ wget https://nchc.dl.sourceforge.net/project/iometer/iometer-stable/1.1.0/iomete
 tar jxvf iometer-1.1.0-linux.x86_64-bin.tar.bz2
 unzip iometer-1.1.0-win64.x86_64-bin.zip
 
+# Backup any existing iometer-playbook directory
+
+if [ -d ~/Desktop/IOmeter-linux ]; then
+    echo "Backing up older iometer-playbook directory..."
+    rm -rf ~/Desktop/IOmeter-linux
+    mv -- IOmeter-linux "IOmeter-linux.backup.$(date +%s)"
+fi
 mkdir ~/Desktop/IOmeter-linux
 
-cp dynamo ~/Desktop/IOmeter-linux
-cp IOmeter.exe ~/Desktop/IOmeter-linux
+cp /opt/iometer-playbook/dynamo ~/Desktop/IOmeter-linux
+cp /opt/iometer-playbook/IOmeter.exe ~/Desktop/IOmeter-linux
 
 cd ~/Desktop/IOmeter-linux
 
